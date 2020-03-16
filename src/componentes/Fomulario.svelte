@@ -1,15 +1,14 @@
 <script>
-
-const valida = () => {
-    
+  const verifica = () => {
+    console.log("Verifica");
+  };
+  const valida = () => {
     console.log("Valida");
-    
-}
+  };
 </script>
 
-
 <h1>Formulario con recaptcha</h1>
-<form on:submit={valida()} >
+<form on:submit={valida()}>
 
   <label>
     Nombre:
@@ -24,7 +23,9 @@ const valida = () => {
     <textarea name="mensaje" id="mensaje" />
   </label>
 
-<div>
-<button type="submit" >Enviar</button>
-</div>
+  <div class="g-recaptcha" data-callback="verifica" data-sitekey="6Lc_s-EUAAAAACWS7IpdI5nnh4krvflPvM00ah8l" />
+
+  <div>
+    <button type="submit">Enviar</button>
+  </div>
 </form>
