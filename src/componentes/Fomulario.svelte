@@ -10,6 +10,9 @@
     let mensaje = e.target[2].value;
     let captcha = e.target[3].value;
 
+  console.log("token: ", e.target[3].value);
+  
+
     if (!!captcha) {
     //   console.log("Valida", nombre, correo, mensaje, captcha);
       respuesta.style.color = "green";
@@ -21,6 +24,10 @@
     }
   };
 
+const callBack = () => {
+  console.log("callBackkkkk");
+  
+}
 </script>
 
 <h1>Formulario con recaptcha</h1>
@@ -39,7 +46,7 @@
     <textarea name="mensaje" id="mensaje" />
   </label>
 
-  <div class="g-recaptcha" data-sitekey={siteKey} />
+  <div class="g-recaptcha" data-callback data-sitekey={siteKey} />
 
   <div>
     <button type="submit">Enviar</button>
